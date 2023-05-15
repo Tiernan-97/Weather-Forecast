@@ -4,6 +4,12 @@ const MAX_DAILY_FORECAST = 5;
 
 // create an array of searched locations
 
+function getLocation() {
+    var userLoc = locationIn.value;
+
+    lookupLocation(userLoc);
+}
+
 const lookupLocation = (search) => {
 
     // Lookup the location to get the Lat/Lon
@@ -13,6 +19,8 @@ const lookupLocation = (search) => {
         .then(data => {
 
             console.log(data);
+
+            document.getElementById('locationTitle').textContent = data[0].name;
 
             // Pick the First location from the results
             //const location = data[0];
@@ -30,6 +38,12 @@ const lookupLocation = (search) => {
 
                     // Display the Current Weather
 
+                    document.getElementById('temperature').textContent = "Temperature: " + Math.floor(((data.current.temp)-32)*(5/9)) + ` \xB0C`;
+                    document.getElementById('wind-speed').textContent = "Wind speed: " + data.current.wind_speed + "mph";
+                    document.getElementById('uv').textContent = "UVI: " + data.current.uvi;
+                    document.getElementById('humidity').textContent = "Humidity: " + data.current.humidity + "%";
+                    
+
                     // Display the 5 Day Forecast
                 });
         });
@@ -37,3 +51,7 @@ const lookupLocation = (search) => {
 
 
 // Add an event handler for the search button
+var locationIn = document.getElementById('location');
+var searchButton = document.getElementById('search');
+
+searchButton.addEventListener('click', getLocation)

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="resetsheet" src="/assets/reset.css">
+    <link rel="stylesheet" src="/assets/style.css">
+    <title>Weather Forecast</title>
+</head>
+<body>
+    <header>
+        <h1>Weather Forecast</h1>
+        <h2>Get the Weather wherever you are!</h2>
+    </header>
+    <aside>
+        <input type="text" placeholder="Enter your location here..." id="location">
+        <button id=search>Search</button>
+    </aside>
+    <section>
+        <div id="oneDayForecastEl">
+            <div id="locationTitle">Enter a Location</div>
+            <div id="weatherDetails">
+                <div id="temperature"></div>
+                <div id="wind-speed"></div>
+                <div id="uv"></div>
+                <div id="humidity"></div>
+            </div>
+            
+        </div>
+        <div id="fiveDayForecastEl">
+            <h2>5-Day Forecast</h2>
+        </div>
+    </section>
+    
+</body>
+<script src="assets/script.js"></script>
+</html>

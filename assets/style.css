@@ -1,4 +1,82 @@
 :root {
+    --altbackground: rgb(66, 65, 65);
+    --background: black;
+    --text: orange;
+}
+
+body {
+    display: block;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+   align-items: center ;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    background-color: var(--altbackground);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 14px;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    background-color: var(--altbackground);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 14px;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    background-color: var(--altbackground);
+    padding: 10px;
+    border-radius: 14px;
+}
+
+#locationTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bolder;
+    background-color: var(--altbackground);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 14px;
+
+}
+
+#oneDayForecastEl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#weatherDetails {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    background-color: var(--altbackground);
+    padding: 10px;
+    border-radius: 14px;
+}
+
+#fiveDayForecastEl {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--altbackground);
+}
+
+.fiveDays {
 }

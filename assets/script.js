@@ -1,6 +1,6 @@
 const WEATHER_API_BASE_URL = 'https://api.openweathermap.org';
 const WEATHER_API_KEY = 'f23ee9deb4e1a7450f3157c44ed020e1';
-const MAX_DAILY_FORECAST = 5;
+const MAX_DAILY_FORECAST = 6;
 var fiveDayForecast = document.getElementById('fiveDayForecastEl');
 
 // create an array of searched locations
@@ -38,7 +38,8 @@ const lookupLocation = (search) => {
                     console.log(data);
 
                     // Display the Current Weather
-
+                    //document.getElementById('weatherCurrentIcon').innerHTML = data.current.weather[0].icon
+                    document.getElementById('dateToday').textContent = new Date(data.current.dt * 1000).toLocaleDateString('en-GB', { weekday: 'long'});
                     document.getElementById('temperature').textContent = "Temperature: " + Math.floor(((data.current.temp)-32)*(5/9)) + ` \xB0C`;
                     document.getElementById('wind-speed').textContent = "Wind speed: " + data.current.wind_speed + "mph";
                     document.getElementById('uv').textContent = "UVI: " + data.current.uvi;
@@ -47,9 +48,9 @@ const lookupLocation = (search) => {
 
                     // Display the 5 Day Forecast
 
-                    for (var i=0; i<MAX_DAILY_FORECAST; i++) {
+                    for (var i=1; i<MAX_DAILY_FORECAST; i++) {
 
-                    fiveDayForecast.innerHTML += `<div class="fiveDays"><p>${Math.floor(((data.daily[i].temp.max)-32)*(5/9))} \xB0C</p><p>${data.daily[i].wind_speed} mph</p><p>${data.daily[i].uvi}</p><p>${data.daily[i].humidity} %</p></div>`
+                    fiveDayForecast.innerHTML += `<div class="fiveDays"><p>${new Date(data.daily[i].dt*1000).toLocaleDateString('en-GB', {weekday: 'long'})}</p><p>Temperature: ${Math.floor(((data.daily[i].temp.max)-32)*(5/9))} \xB0C</p><p>Wind Speed: ${data.daily[i].wind_speed} mph</p><p>UVI: ${data.daily[i].uvi}</p><p>Humidity: ${data.daily[i].humidity} %</p></div>`
                     };
 
 

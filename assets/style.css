@@ -70,13 +70,25 @@ aside {
     background-color: var(--altbackground);
     padding: 10px;
     border-radius: 14px;
+    margin-top: 10px;
 }
 
 #fiveDayForecastEl {
     display: flex;
     justify-content: space-evenly;
-    background-color: var(--altbackground);
 }
 
 .fiveDays {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--altbackground);
+    border-radius: 14px;
+    padding: 10px;
+
+}
+
+#fiveDayContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

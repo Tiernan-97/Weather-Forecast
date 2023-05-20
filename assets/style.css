@@ -87,6 +87,12 @@ aside {
 
 }
 
+#weatherCurrentIcon {
+    display: flex;
+    justify-content: center;
+
+}
+
 #fiveDayContainer {
     display: flex;
     flex-direction: column;

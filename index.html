@@ -16,6 +16,11 @@
     <aside>
         <input type="text" placeholder="Enter your location here..." id="location">
         <button id=search>Search</button>
+        <div id="error" style="color: red"></div>
+        
+        <div id="recentSearches">
+            <h3>Recent Searches</h3>
+        </div>
     </aside>
     <section>
         <div id="oneDayForecastEl">
@@ -23,7 +28,7 @@
             <div id="weatherDetails">
                 <div id="weatherCurrentIcon"></div>
                 <div>
-                    <img id="dateToday"></img>
+                    <div id="dateToday"></div>
                     <div id="temperature"></div>
                     <div id="wind-speed"></div>
                     <div id="uv"></div>

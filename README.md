@@ -45,4 +45,4 @@ Live Page: https://tiernan-97.github.io/Weather-Forecast/
 
 ## Screenshot 
 
-<img href='/assets/weatherForecast.png'></img>
+<img src='/assets/weatherForecast.png'></img>
